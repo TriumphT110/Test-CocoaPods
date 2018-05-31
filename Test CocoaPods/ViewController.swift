@@ -7,12 +7,20 @@
 //
 
 import UIKit
+import MaterialComponents
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
+
+    @IBOutlet weak var helloText: MDCTextField!
+    
+    // MARK: Properties
+    var helloController: MDCTextInputControllerOutlined?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        helloController = MDCTextInputControllerOutlined(textInput: helloText)
+        
     }
 
     override func didReceiveMemoryWarning() {
