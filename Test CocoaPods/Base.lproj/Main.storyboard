@@ -19,11 +19,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Say Hello!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rba-f8-Jmq" customClass="MDCTextField">
-                                <rect key="frame" x="137.5" y="80" width="100" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="MZI-8W-MJo"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="owb-9f-nud"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="50" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Say it again!!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iTk-W0-dFt" customClass="MDCTextField">
+                                <rect key="frame" x="20" y="80" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Say please..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kO5-Ka-VoQ" customClass="MDCTextField">
+                                <rect key="frame" x="20" y="110" width="335" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -31,13 +39,25 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="rba-f8-Jmq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="lmS-4n-KaP"/>
-                            <constraint firstItem="rba-f8-Jmq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yHs-JE-H4q"/>
+                            <constraint firstItem="rba-f8-Jmq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8ao-8Q-Kdo"/>
+                            <constraint firstItem="kO5-Ka-VoQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="9eU-zu-bXA"/>
+                            <constraint firstItem="iTk-W0-dFt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="E2x-cQ-DiL"/>
+                            <constraint firstItem="iTk-W0-dFt" firstAttribute="top" secondItem="rba-f8-Jmq" secondAttribute="bottom" priority="750" id="JF1-Ob-fvm"/>
+                            <constraint firstItem="iTk-W0-dFt" firstAttribute="top" secondItem="rba-f8-Jmq" secondAttribute="bottom" id="Sok-7V-fNB"/>
+                            <constraint firstItem="kO5-Ka-VoQ" firstAttribute="top" secondItem="iTk-W0-dFt" secondAttribute="bottom" priority="750" id="T2H-NC-nP6"/>
+                            <constraint firstItem="kO5-Ka-VoQ" firstAttribute="top" secondItem="iTk-W0-dFt" secondAttribute="bottom" id="ZYu-ad-etA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rba-f8-Jmq" secondAttribute="trailing" constant="20" id="e3Z-LX-U8i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kO5-Ka-VoQ" secondAttribute="trailing" constant="20" id="hDM-rk-viz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="kO5-Ka-VoQ" secondAttribute="bottom" constant="50" id="p0Q-aa-6K3"/>
+                            <constraint firstItem="rba-f8-Jmq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="qeI-ns-vuj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iTk-W0-dFt" secondAttribute="trailing" constant="20" id="zT9-ne-hqI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="helloText" destination="rba-f8-Jmq" id="l7K-0T-pZh"/>
+                        <outlet property="sayAgain" destination="iTk-W0-dFt" id="itG-VH-dKe"/>
+                        <outlet property="sayPlease" destination="kO5-Ka-VoQ" id="Qga-ID-cFN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

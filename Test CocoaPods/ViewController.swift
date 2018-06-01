@@ -12,15 +12,21 @@ import MaterialComponents
 class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var helloText: MDCTextField!
+    @IBOutlet weak var sayAgain: MDCTextField!
+    @IBOutlet weak var sayPlease: MDCTextField!
     
     // MARK: Properties
     var helloController: MDCTextInputControllerOutlined?
+    var againController: MDCTextInputControllerOutlined?
+    var pleaseController: MDCTextInputControllerOutlined?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         helloController = MDCTextInputControllerOutlined(textInput: helloText)
-        
+        againController = MDCTextInputControllerOutlined(textInput: sayAgain)
+        pleaseController = MDCTextInputControllerOutlined(textInput: sayPlease)
+
     }
 
     override func didReceiveMemoryWarning() {
